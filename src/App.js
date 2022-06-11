@@ -9,7 +9,6 @@ import {
   Navbar,
   Footer,
   Sidebar,
-  ThemeSetting,
   ThemeSettings,
 } from "./components";
 import {
@@ -35,7 +34,7 @@ function App() {
   const { activeMenu, themeSetting, setThemeSetting , currentColor, currentMode} = useStateContext();
   // console.log(activeMenu)
   return (
-    <main className={currentMode === 'Dark' ? 'dark' : ''}>
+    <main className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg ">
           <div className="fixed right-4 bottom-4 " style={{ zIndex: "1000" }}>
@@ -96,6 +95,7 @@ function App() {
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>

@@ -99,7 +99,7 @@ const Navbar = () => {
             className=" flex items-center gap-2 cursor-pointer p-1
           hover:bg-light-gray rounded-lg
           "
-            onClick={() => handleClick("UserProfile")}
+            onClick={() => handleClick("userProfile")}
           >
             <img
               src={avatar}
@@ -116,7 +116,7 @@ const Navbar = () => {
           </div>
         </TooltipComponent>
         {isClicked.chat && <Chat />}
-        {isClicked.cart && <Cart />}
+        {isClicked.cart && <Cart setIsClicked={setIsClicked} />}
         {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
       </div>
